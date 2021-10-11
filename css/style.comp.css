@@ -275,6 +275,24 @@ body {
   .gallery__photo {
     width: 100%;
     display: block; }
+  .gallery__item {
+    position: relative; }
+    .gallery__item-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 100;
+      opacity: 0;
+      transition: all .3s;
+      backface-visibility: hidden; }
+    .gallery__item:hover .gallery__item-caption {
+      opacity: 1;
+      transform: translate(-50%, -50%); }
+    .gallery__item:hover .gallery__photo {
+      filter: blur(3px) brightness(80%); }
 
 .overview {
   display: flex;
